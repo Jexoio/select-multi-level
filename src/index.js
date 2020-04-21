@@ -1,7 +1,3 @@
-/**
- * @class SelectMultiLevel
- */
-
 import React, { PureComponent } from 'react';
 import Tag from '@atlaskit/tag';
 import TagGroup from '@atlaskit/tag-group';
@@ -13,7 +9,7 @@ import Spinner from '@atlaskit/spinner';
 import ArrowLeftIcon from '@atlaskit/icon/glyph/arrow-left';
 import OutsideClickDetector from './OutsideClickDetector';
 
-export default class SelectMultiLevel extends PureComponent {
+class SelectMultiLevel extends PureComponent {
   state = {    
     filter: '',
     selected: this.props.value || [],
@@ -271,3 +267,5 @@ export default class SelectMultiLevel extends PureComponent {
     )
   }
 }
+
+export default SelectMultiLevel;

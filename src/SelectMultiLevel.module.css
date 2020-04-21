@@ -1,0 +1,173 @@
+.Container {
+  position: relative;
+}
+
+.Preview {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  min-height: 28px;
+  background-color: #F4F5F7;
+  border-radius: 3px;
+  padding: 8px 30px 8px 8px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out 0s, border-color 200ms ease-in-out 0s;
+}
+
+.Preview:hover {
+  background-color: #EBECF0;
+}
+
+.DownIcon {
+  position: absolute;
+  right: 6px;
+}
+
+.TagWrapper {
+  position: relative;
+}
+
+.TagWrapper > div {
+  user-select: none;
+  pointer-events: none;
+}
+
+.TagWrapper > div > span {
+  background-color: #DFE1E6 !important;
+}
+
+.TagWrapper button {
+  pointer-events: all;
+}
+
+.TagWrapper button:focus, 
+.TagWrapper button:hover:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.TagWrapper button:hover {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.TagWrapper button:hover, .TagWrapper button:hover > span {
+  background-color: #FFBDAD;
+}
+
+.TriggerArea {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.ListContainer {
+  height: 0;
+}
+
+.ListContainer > div > div > div > div > div {
+  max-height: 100%;
+}
+
+.SearchContainer {
+  padding: 8px 12px 7px;
+}
+
+.PageTitle {
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #42526e;
+  padding: 8px 12px 7px;
+}
+
+.ItemsList {
+  overflow: auto;
+  max-height: 210px;
+}
+
+.ItemsList .Item {
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  color: rgb(23, 43, 77);
+  fill: rgb(255, 255, 255);
+  width: auto;
+  border-radius: 0px;
+  flex: 0 0 auto;
+  text-decoration: none;
+  padding: 8px 12px 7px;
+  transition: background-color 200ms ease 0s;
+  animation: FadeIn .5s;
+}
+
+.ItemsList .Item:hover {
+  background-color: rgb(244, 245, 247);
+  color: rgb(23, 43, 77);
+  fill: rgb(244, 245, 247);
+  text-decoration: none;
+}
+
+.BackButton {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px 7px;
+  cursor: pointer;
+}
+
+.BackButtonLabel {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #42526e;
+}
+
+.Loader {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.EmptyViewContainer {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.EmptyViewText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #999999;
+}
+
+@keyframes FadeIn {
+  0%   { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }
+}

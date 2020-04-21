@@ -1,17 +1,11 @@
 {
   "name": "@jexo/select-multi-level",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multi level select to Jira",
-  "main": "./dist/index.js",
+  "main": "build/index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.babel.js",
-    "build-examples": "webpack --config examples/webpack.config.babel.js --progress",
-    "clean": "rm -rf dist coverage",
-    "coverage": "jest --coverage",
-    "lint": "eslint ./src",
-    "prepublish": "npm run clean && npm run test && npm run build",
-    "start": "webpack-dev-server --config examples/webpack.config.live.babel.js",
-    "test": "npm run lint && npm run coverage"
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -30,49 +24,24 @@
     "url": "https://github.com/birox/select-multi-level/issues"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "babel-loader": "^8.0.4",
-    "chai": "^4.1.2",
-    "clean-webpack-plugin": "^0.1.16",
-    "css-loader": "^3.0.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-react": "^7.4.0",
-    "jest-cli": "^23.6.0",
-    "node-sass": "^4.7.2",
-    "prop-types": "^15.6.0",
-    "react": "^16.6.0",
-    "react-addons-test-utils": "^15.5.1",
-    "react-dom": "^16.6.0",
-    "react-hot-loader": "next",
-    "react-test-renderer": "^16.0.0",
-    "regenerator-runtime": "^0.12.1",
-    "sass-loader": "^7.0.1",
-    "style-loader": "^0.23.1",
-    "styled-components": "^4.3.2",
-    "webpack": "^4.9.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.4"
-  },
-  "peerDependencies": {
-    "react": ">= 16.3.0",
-    "react-dom": ">= 16.3.0"
-  },
-  "resolutions": {
-    "babel-core": "7.0.0-bridge.0"
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.1.4",
+    "styled-components": "^5.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "@atlaskit/droplist": "^10.0.3",
     "@atlaskit/icon": "^20.1.0",
     "@atlaskit/tag": "^9.1.0",
     "@atlaskit/tag-group": "^9.0.6",
-    "react-tooltip": "^3.10.0"
+    "@atlaskit/textfield": "^3.1.9"
   }
 }
